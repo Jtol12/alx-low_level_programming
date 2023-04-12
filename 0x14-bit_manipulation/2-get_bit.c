@@ -1,21 +1,20 @@
 #include "main.h"
 
-
 /**
- * valued - returns the value of a bit at an binary in a decimal number
+ * get_bit - returns the value of a bit at an integer in a decimal number
  * @n: number to search
- * @binary: binary of the bit
+ * @integer: integer of the bit
  *
  * Return: value of the bit
  */
-int valued(unsigned long int m, unsigned int binary)
+int get_bit(unsigned long int m, unsigned int integer)
 {
-	int int_val;
+	int bit_val;
 
-	if (binary > 63)
+	if (integer > 63)
 		return (-1);
 
-	int_val = (m >> binary) & 1;
+	bit_val = (m >> integer) & 1;
 
-	return (int_val);
+	return (bit_val);
 }
